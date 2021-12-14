@@ -4,7 +4,7 @@ import { View, Text, TouchableOpacity } from 'react-native'
 const Header = () => {
     const [activeTab, setActiveTab] = useState("Delivery");
     return (
-        <View style={{ flexDirection: "row", alignSelf: "center", marginTop: 50, }} >
+        <View style={{ flexDirection: "row", alignSelf: "center"}} >
             <HeaderButton text="Delivery" btnColor={activeTab === "Delivery" ? "black" : "white"} textColor={activeTab === "Delivery" ? "white" : "black"} activeTab={activeTab} setActiveTab={setActiveTab} />
             <HeaderButton text="Pick up" btnColor={activeTab !== "Delivery" ? "black" : "white"} textColor={activeTab !== "Delivery" ? "white" : "black"} activeTab={activeTab} setActiveTab={setActiveTab} />
         </View>
