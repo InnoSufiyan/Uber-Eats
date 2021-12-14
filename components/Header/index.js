@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { View, Text, TouchableOpacity } from 'react-native'
 
 const Header = () => {
-    const [activeTab, setActiveTab] = useState("Delivery")
+    const [activeTab, setActiveTab] = useState("Delivery");
     return (
         <View style={{ flexDirection: "row", alignSelf: "center", marginTop: 50, }} >
             <HeaderButton text="Delivery" btnColor={activeTab === "Delivery" ? "black" : "white"} textColor={activeTab === "Delivery" ? "white" : "black"} activeTab={activeTab} setActiveTab={setActiveTab} />
@@ -20,7 +20,7 @@ const HeaderButton = (props) => {
             style={{ backgroundColor: props.btnColor, paddingVertical: 6, paddingHorizontal: 16, borderRadius: 30 }}
             onPress={() => props.setActiveTab(props.text)}
         >
-            <Text style={{ color: props.textColor, fontSize: 15, fontWeight: "900px", }}>
+            <Text style={{ color: props.textColor, fontSize: 15, fontWeight: "900", }}>
                 {props.text}
             </Text>
         </TouchableOpacity>
